@@ -12,6 +12,11 @@
     min-height: 350px;
     position: relative;
     width: 100%;
+
+    @include breakpoint(small only) {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   .review {
@@ -27,6 +32,11 @@
     text-align: center;
     transition: all 1s linear;
     width: 100%;
+
+    @include breakpoint(small only) {
+      margin-top: 20px;
+      position: static;
+    }
 
     &:nth-of-type(odd) {
       top: 30px;

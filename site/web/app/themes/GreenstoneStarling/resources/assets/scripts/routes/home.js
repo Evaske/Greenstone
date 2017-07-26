@@ -7,12 +7,17 @@ export default {
 
     let direction = 'right';
 
-    $('.review').each(function(index) {
-      const width = $(this).outerWidth();
-      const left = (index * width) + (index * 30);
-      $(this).css({'left': left + 'px'});
-      $(this).attr('data-count', index);
-    });
+    // Only run if not mobile
+    if($(window).width() > 415) {
+
+      $('.review').each(function(index) {
+        const width = $(this).outerWidth();
+        const left = (index * width) + (index * 30);
+        $(this).css({'left': left + 'px'});
+        $(this).attr('data-count', index);
+      });
+
+    }
 
     var moveReviews = function() {
 
@@ -76,7 +81,7 @@ export default {
         $('.review.selected').removeClass('selected').next().addClass('selected');
       };
 
-    
+
     if(numberOfReviews > 3) {
       setInterval(moveReviews, 5000);
     }

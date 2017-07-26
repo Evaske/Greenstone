@@ -1,10 +1,10 @@
 <footer class="footer-contact">
   <div class="row">
-    <div class="small-6 columns">
+    <div class="small-12 medium-6 columns">
       <div class="ready">Ready to get started?</div>
       <div class="get-in-touch">Get in touch about your <b>EBT</b> programme</div>
     </div>
-    <div class="small-6 columns">
+    <div class="small-12 medium-6 columns">
       <div class="button-wrapper">
         <a href="#" class="button button--purple">Reach out to the team</a>
       </div>
