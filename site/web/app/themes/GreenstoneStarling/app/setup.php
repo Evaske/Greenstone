@@ -16,12 +16,26 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_script('sage/main.js', asset_path('scripts/main.js'), ['jquery'], null, true);
 }, 100);
 
+// Remove JQuery Migrate
 add_filter( 'wp_default_scripts', function(&$scripts){
   if(!is_admin()){
     $scripts->remove( 'jquery');
     $scripts->add( 'jquery', false, array( 'jquery-core' ), '1.10.2' );
   }
 });
+
+// Remove Query Strings
+if ( !is_admin() ) {
+  add_filter( 'script_loader_src', function($src) {
+    $parts = explode( '?ver', $src );
+    return $parts[0];
+  });
+
+  add_filter( 'style_loader_src', function($src) {
+    $parts = explode( '?ver', $src );
+    return $parts[0];
+  });
+}
 
 /**
  * Theme setup
