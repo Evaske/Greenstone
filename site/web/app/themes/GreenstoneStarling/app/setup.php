@@ -13,6 +13,7 @@ use Roots\Sage\Template\BladeProvider;
  */
 add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style('sage/main.css', asset_path('styles/main.css'), false, null);
+    wp_enqueue_script('jquery', '/wp-includes/js/jquery/jquery.js', false, null, true);
     wp_enqueue_script('sage/main.js', asset_path('scripts/main.js'), ['jquery'], null, true);
 }, 100);
 
@@ -20,7 +21,6 @@ add_action('wp_enqueue_scripts', function () {
 add_filter( 'wp_default_scripts', function(&$scripts){
   if(!is_admin()){
     $scripts->remove( 'jquery');
-    $scripts->add( 'jquery', false, array( 'jquery-core' ), '1.10.2' );
   }
 });
 
