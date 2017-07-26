@@ -101,26 +101,19 @@
     <div class="row">
       <div class="small-12 columns">
         <div class="reviews">
+
+          @php $args = array('post_type' => 'testimonials');
+          $loop = new WP_Query( $args );
+          while ( $loop->have_posts() ) : $loop->the_post(); @endphp
+
           <div class="review">
-            <div class="name">Jane Doe says...</div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In euismod urna in tortor sagittis, vel ornare risus porttitor.</p>
-            <a href="#" class="url">www.google.com</a>
+            <div class="name">@php echo esc_html( get_post_meta( get_the_ID(), 'testimonial_name', true ) ); @endphp says...</div>
+            <p>@php the_content() @endphp</p>
+            <a href="@php echo esc_html( get_post_meta( get_the_ID(), 'testimonial_website', true ) ); @endphp" target="_blank" class="url">@php echo esc_html( get_post_meta( get_the_ID(), 'testimonial_website', true ) ); @endphp</a>
           </div>
-          <div class="review selected">
-            <div class="name">Joe Bloggs says...</div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In euismod urna in tortor sagittis, vel ornare risus porttitor.</p>
-            <a href="#" class="url">www.google.com</a>
-          </div>
-          <div class="review">
-            <div class="name">Linda Jones says...</div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In euismod urna in tortor sagittis, vel ornare risus porttitor.</p>
-            <a href="#" class="url">www.google.com</a>
-          </div>
-          <div class="review">
-            <div class="name">Jane Doe says...</div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In euismod urna in tortor sagittis, vel ornare risus porttitor.</p>
-            <a href="#" class="url">www.google.com</a>
-          </div>
+
+          @php endwhile; @endphp
+
         </div>
       </div>
   </section>

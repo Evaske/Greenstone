@@ -76,9 +76,10 @@ export default {
         $('.review.selected').removeClass('selected').next().addClass('selected');
       };
 
-
-
-    setInterval(moveReviews, 5000);
+    
+    if(numberOfReviews > 3) {
+      setInterval(moveReviews, 5000);
+    }
 
   },
   finalize() {
