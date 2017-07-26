@@ -1,0 +1,60 @@
+// Reviews
+.home-reviews {
+  overflow: hidden;
+  padding-bottom: 100px;
+
+  h2 {
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+  .reviews {
+    min-height: 350px;
+    position: relative;
+    width: 100%;
+  }
+
+  .review {
+    background: $white;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px 0 rgba($black, .08), 0 4px 6px 0 rgba($blue-shadow, .11);
+    margin-top: 30px;
+    max-height: 232px;
+    max-width: 370px;
+    opacity: .5;
+    padding: 30px;
+    position: absolute;
+    text-align: center;
+    transition: all 1s linear;
+    width: 100%;
+
+    &:nth-of-type(odd) {
+      top: 30px;
+    }
+
+    &:nth-of-type(even) {
+      top: 60px;
+    }
+
+    &.selected {
+      opacity: 1;
+    }
+  }
+
+  .name {
+    color: $font-grey;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 30px;
+  }
+
+  .url {
+    color: $link-blue;
+    display: block;
+    margin-top: 10px;
+
+    &:hover {
+      color: $new-purple;
+    }
+  }
+}

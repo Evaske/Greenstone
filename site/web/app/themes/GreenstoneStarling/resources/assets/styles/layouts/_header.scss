@@ -1,0 +1,11 @@
+// Header
+.main-header {
+  .brand {
+    display: block;
+    margin-top: 20px;
+
+    @include breakpoint(medium down) {
+      margin-top: 16px;
+    }
+  }
+}

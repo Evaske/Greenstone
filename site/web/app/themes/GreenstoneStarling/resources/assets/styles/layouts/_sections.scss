@@ -1,0 +1,38 @@
+// Section Styles
+.section {
+  padding: 60px 0;
+  position: relative;
+
+  &.section--before {
+    background: $section-blue;
+
+    &::before {
+      background: $section-blue;
+      content: '';
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: -60px;
+      transform: skew(0, -4deg);
+      width: 100%;
+      z-index: -1;
+    }
+  }
+
+  &.section--after {
+    background: $section-blue;
+    margin-bottom: 100px;
+    padding: 60px 0 0;
+
+    &::after {
+      background: $section-blue;
+      bottom: -60px;
+      content: '';
+      height: 100%;
+      position: absolute;
+      transform: skew(0, -4deg);
+      width: 100%;
+      z-index: -1;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+// Base styles
+body,
+h1,
+h2,
+p {
+  font-family: 'Camphor';
+  font-weight: normal;
+}
+
+h2 {
+  color: $new-purple;
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0 0 30px;
+  text-transform: uppercase;
+
+  @include breakpoint(small only) {
+    font-size: 20px;
+    line-height: 25px;
+    margin: 0 0 20px;
+  }
+}
+
+h3 {
+  color: $font-grey;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+p {
+  color: $font-grey;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 26px;
+  margin: 0;
+
+  @include breakpoint(small only) {
+    font-size: 16px;
+    line-height: 21px;
+  }
+}

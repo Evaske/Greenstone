@@ -1,0 +1,22 @@
+.home-what-we-do {
+  background: $section-blue;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  .home-mission {
+    background: $white;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px 0 rgba($black, .08), 0 4px 6px 0 rgba($blue-shadow, .11);
+    color: $new-purple;
+    font-size: 17px;
+    line-height: 26px;
+    margin-bottom: 60px;
+    padding: 60px 40px;
+  }
+
+  .button {
+    align-self: center;
+    margin-top: 30px;
+  }
+}
