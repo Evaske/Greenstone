@@ -107,7 +107,7 @@
           while ( $loop->have_posts() ) : $loop->the_post(); @endphp
 
           <div class="review">
-            <div class="name">@php echo esc_html( get_post_meta( get_the_ID(), 'testimonial_name', true ) ); @endphp says...</div>
+            <div class="name">@php echo the_title() @endphp says...</div>
             <p>@php the_content() @endphp</p>
             <a href="@php echo esc_html( get_post_meta( get_the_ID(), 'testimonial_website', true ) ); @endphp" target="_blank" class="url">@php echo esc_html( get_post_meta( get_the_ID(), 'testimonial_website', true ) ); @endphp</a>
           </div>
