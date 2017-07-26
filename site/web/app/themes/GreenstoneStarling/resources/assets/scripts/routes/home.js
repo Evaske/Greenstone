@@ -24,8 +24,6 @@ export default {
 
       const selectedNumber = $('.review.selected').attr('data-count');
 
-      console.log(selectedNumber);
-
       if(selectedNumber == 0) {
         direction = 'left';
       }
@@ -33,7 +31,7 @@ export default {
       if(selectedNumber == (numberOfReviews - 1)) {
         direction = 'right';
       }
-    }
+    };
 
     var reviewRight = function() {
       $('.review').each(function() {
@@ -54,7 +52,7 @@ export default {
       });
 
     $('.review.selected').removeClass('selected').prev().addClass('selected');
-  }
+  };
 
 
     var reviewLeft = function() {
@@ -76,7 +74,7 @@ export default {
       });
 
         $('.review.selected').removeClass('selected').next().addClass('selected');
-      }
+      };
 
 
 

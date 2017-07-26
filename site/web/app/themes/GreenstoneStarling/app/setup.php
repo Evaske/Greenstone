@@ -17,6 +17,13 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style( 'sage/google-fonts', 'http://fonts.googleapis.com/css?family=Roboto:400,300,100', false );
 }, 100);
 
+add_filter( 'wp_default_scripts', function(&$scripts){
+  if(!is_admin()){
+    $scripts->remove( 'jquery');
+    $scripts->add( 'jquery', false, array( 'jquery-core' ), '1.10.2' );
+  }
+});
+
 /**
  * Theme setup
  */
