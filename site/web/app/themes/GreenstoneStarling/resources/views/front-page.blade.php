@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+@while(have_posts()) @php(the_post())
   <section class="home-slider">
     <img src="@asset('images/homepage_slider_globe.jpg')" sizes="100vw"
       srcset="@asset('images/homepage_slider_globe_mobile.jpg') 640w,
@@ -19,15 +20,14 @@
     <div class="row">
       <div class="small-12 medium-10 medium-offset-1 columns">
         <aside class="home-mission">
-          The industry approach to pilot training is changing.
-          Why continue to focus on task specific repetitive training for statistically less likely events when Evidence-based Training will enable you to build resilience and gain competitive advantage through enhanced pilot capability?
+          @php echo get_post_meta(get_the_ID(), 'home-mission', true); @endphp
         </aside>
       </div>
     </div>
     <div class="row">
       <div class="small-12 medium-10 medium-offset-1 columns">
         <h2>What We Do</h2>
-        <p>We work with airlines and national civil aviation authorities to develop Evidence-based Training programmes for the pilot community.  EBT focuses on the capability a pilot requires to perform their role and looks to improve their competency, based on their individual need, the aircraft they are flying and th§e operational environment.</p>
+        @php echo get_post_meta(get_the_ID(), 'home-what-we-do', true); @endphp
       </div>
     </div>
     <a href="#" class="button button--purple">Find Out More About Us</a>
@@ -43,24 +43,24 @@
       <div class="small-12 medium-4 columns">
         <div class="service">
           <img src="@asset('images/icons/logo-green.png')" width="60" />
-          <h3>EBT Instructor Development</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In euismod urna in tortor sagittis, vel ornare risus porttitor.</p>
+          <h3>@php echo get_post_meta(get_the_ID(), 'home-service-one-title', true); @endphp</h3>
+          <p>@php echo get_post_meta(get_the_ID(), 'home-service-one-content', true); @endphp</p>
           <a href="#" class="button button--purple">More Information</a>
         </div>
       </div>
       <div class="small-12 medium-4 columns">
         <div class="service">
           <img src="@asset('images/icons/logo-purple.png')" width="60" />
-          <h3>EBT Programme Design</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In euismod urna in tortor sagittis, vel ornare risus porttitor.</p>
+          <h3>@php echo get_post_meta(get_the_ID(), 'home-service-two-title', true); @endphp</h3>
+          <p>@php echo get_post_meta(get_the_ID(), 'home-service-two-content', true); @endphp</p>
           <a href="#" class="button button--purple">More Information</a>
         </div>
       </div>
       <div class="small-12 medium-4 columns">
         <div class="service">
           <img src="@asset('images/icons/logo-light-green.png')" width="60" />
-          <h3>Data Led Programme Enrichment</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In euismod urna in tortor sagittis, vel ornare risus porttitor.</p>
+          <h3>@php echo get_post_meta(get_the_ID(), 'home-service-three-title', true); @endphp</h3>
+          <p>@php echo get_post_meta(get_the_ID(), 'home-service-three-content', true); @endphp</p>
           <a href="#" class="button button--purple">More Information</a>
         </div>
       </div>
@@ -71,7 +71,7 @@
     <div class="row">
       <div class="small-12 columns">
         <h2>Some Of Our Clients</h2>
-        <p>We are trusted by our clients to build resilience through Evidence-based Training, by virtue of our competence, reliability and integrity.</p>
+        <p>@php echo get_post_meta(get_the_ID(), 'home-clients-text', true); @endphp</p>
       </div>
     </div>
     <div class="row">
@@ -124,4 +124,5 @@
         </div>
       </div>
   </section>
+@endwhile
 @endsection
