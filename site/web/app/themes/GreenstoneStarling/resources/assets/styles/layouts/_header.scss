@@ -1,5 +1,12 @@
 // Header
 .main-header {
+  background: $white;
+  box-shadow: 0 1px 3px 0 rgba($black, .08), 0 4px 6px 0 rgba($blue-shadow, .11);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+
   .brand {
     display: block;
     margin-top: 20px;

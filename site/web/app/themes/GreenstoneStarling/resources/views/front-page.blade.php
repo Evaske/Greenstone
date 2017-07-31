@@ -11,7 +11,7 @@
       <div class="header-wrapper">
         <div class="header">
           <h1>Building resilience<br/ >through evidence</h1>
-          <a href="#" class="button button--purple">Find Out More</a>
+          <a href="#" class="button button--purple js-button-scroll" data-scrollto="home-what-we-do">Find Out More</a>
         </div>
       </div>
   </section>
@@ -30,7 +30,7 @@
         @php echo get_post_meta(get_the_ID(), 'home-what-we-do', true); @endphp
       </div>
     </div>
-    <a href="#" class="button button--purple">Find Out More About Us</a>
+    <a href="/about-us" class="button button--purple">Find Out More About Us</a>
   </section>
 
   <section class="section home-our-services">
@@ -45,7 +45,7 @@
           <img src="@asset('images/icons/logo-green.png')" width="60" />
           <h3>@php echo get_post_meta(get_the_ID(), 'home-service-one-title', true); @endphp</h3>
           <p>@php echo get_post_meta(get_the_ID(), 'home-service-one-content', true); @endphp</p>
-          <a href="#" class="button button--purple">More Information</a>
+          <a href="/our-services#service-one" class="button button--purple">More Information</a>
         </div>
       </div>
       <div class="small-12 medium-4 columns">
@@ -53,7 +53,7 @@
           <img src="@asset('images/icons/logo-purple.png')" width="60" />
           <h3>@php echo get_post_meta(get_the_ID(), 'home-service-two-title', true); @endphp</h3>
           <p>@php echo get_post_meta(get_the_ID(), 'home-service-two-content', true); @endphp</p>
-          <a href="#" class="button button--purple">More Information</a>
+          <a href="/our-services#service-two" class="button button--purple">More Information</a>
         </div>
       </div>
       <div class="small-12 medium-4 columns">
@@ -61,7 +61,7 @@
           <img src="@asset('images/icons/logo-light-green.png')" width="60" />
           <h3>@php echo get_post_meta(get_the_ID(), 'home-service-three-title', true); @endphp</h3>
           <p>@php echo get_post_meta(get_the_ID(), 'home-service-three-content', true); @endphp</p>
-          <a href="#" class="button button--purple">More Information</a>
+          <a href="/our-services#service-three" class="button button--purple">More Information</a>
         </div>
       </div>
     </div>

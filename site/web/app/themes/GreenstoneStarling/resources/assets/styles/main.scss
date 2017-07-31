@@ -22,6 +22,10 @@
 @import 'components/nav';
 @import 'components/home';
 
-body {
-  background: 'red';
+.main {
+  margin-top: 100px;
+
+  @include breakpoint(medium down) {
+    margin-top: 50px;
+  }
 }

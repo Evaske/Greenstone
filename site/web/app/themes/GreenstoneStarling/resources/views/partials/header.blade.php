@@ -7,10 +7,18 @@
       </a>
     </div>
     <div class="small-6 medium-9 large-9 columns">
-      <nav class="nav-primary hide-for-small-only">
+      <nav class="nav-primary show-for-large">
         @if (has_nav_menu('primary_navigation'))
           {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']) !!}
         @endif
       </nav>
     </div>
+
+    <div class="mobile-burger js-mobile-nav hide-for-large"><img src="@asset('images/icons/mobile-menu.svg')" width="20px" /></div>
 </header>
+
+<nav class="mobile-menu js-mobile-menu">
+  @if (has_nav_menu('primary_navigation'))
+    {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']) !!}
+  @endif
+</nav>

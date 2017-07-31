@@ -34,4 +34,45 @@
       color: $new-purple;
     }
   }
+
+  .current-menu-item a {
+    color: $new-purple;
+  }
+}
+
+.mobile-menu {
+  background: $white;
+  box-shadow: 0 1px 3px 0 rgba($black, .08), 0 4px 6px 0 rgba($blue-shadow, .11);
+  // display: none;
+  left: 0;
+  padding: 20px 0;
+  position: fixed;
+  top: -200px;
+  transition: all .25s linear;
+  width: 100%;
+  z-index: 10;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    text-align: center;
+  }
+
+  a {
+    color: $font-grey;
+    transition: color .25s linear;
+  }
+
+  a:hover {
+    color: $new-purple;
+  }
+
+  .current-menu-item a {
+    color: $new-purple;
+  }
+}
+
+.mobile-burger {
+  float: right;
+  margin: 26px 15px;
 }
