@@ -40,8 +40,8 @@
     width: 100%;
 
     @include breakpoint(large down) {
-      max-height: none;
       margin-left: 20px;
+      max-height: none;
       position: static;
 
       &:first-of-type {
