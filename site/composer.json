@@ -47,8 +47,8 @@
     "johnpbloch/wordpress": "4.8.0",
     "oscarotero/env": "^1.1.0",
     "roots/wp-password-bcrypt": "1.0.0",
-    "ggamel/wp-sync-db": "dev-master",
-    "wpackagist-plugin/cmb2": "2.2.4"
+    "wpackagist-plugin/cmb2": "2.2.4",
+    "ggamel/wp-sync-db": "dev-master"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^2.5.1"

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "01b15a6dc457b1e0e67ed27fb9bce9ec",
+    "content-hash": "0aa96ee23525b0b335e6e02b6974034d",
     "packages": [
         {
             "name": "composer/installers",
@@ -437,7 +437,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/cmb2.zip?timestamp=1488208231",
-                "reference": null,
+                "reference": "trunk",
                 "shasum": null
             },
             "require": {
