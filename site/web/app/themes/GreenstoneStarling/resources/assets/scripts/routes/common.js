@@ -8,9 +8,14 @@ export default {
       const numberOfReviews = $('.review').length;
       let direction = 'right';
 
-      // Only run if not mobile
-      if($(window).width() > 415) {
+      // Only run if desktop
+      if($(window).width() > 1200) {
         $('.review').each(function(index) {
+
+          if(index == 1) {
+            $(this).addClass('selected');
+          }
+
           const width = $(this).outerWidth();
           const left = (index * width) + (index * 30);
           $(this).css({'left': left + 'px'});
@@ -41,7 +46,7 @@ export default {
         $('.review').each(function() {
 
           const left = $(this).position().left;
-          const width = $(this).outerWidth;
+          const width = $(this).outerWidth();
           let newLeft;
 
           if(direction === 'right') {
@@ -68,7 +73,7 @@ export default {
         }
       }
 
-      if(numberOfReviews > 3) {
+      if(numberOfReviews > 3 && $(window).width() > 1200) {
         setInterval(moveReviews, 5000);
       }
     }

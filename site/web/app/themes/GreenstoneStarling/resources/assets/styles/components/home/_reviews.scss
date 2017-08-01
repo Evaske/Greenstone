@@ -13,7 +13,13 @@
     position: relative;
     width: 100%;
 
-    @include breakpoint(small only) {
+    @include breakpoint(large down) {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    @include breakpoint(medium down) {
+      align-items: center;
       display: flex;
       flex-direction: column;
     }
@@ -33,9 +39,23 @@
     transition: all 1s linear;
     width: 100%;
 
-    @include breakpoint(small only) {
-      margin-top: 20px;
+    @include breakpoint(large down) {
+      max-height: none;
+      margin-left: 20px;
       position: static;
+
+      &:first-of-type {
+        margin-left: 0;
+      }
+
+      &:nth-child(n+4) {
+        display: none;
+      }
+    }
+
+    @include breakpoint(medium down) {
+      margin-left: 0;
+      margin-top: 20px;
     }
 
     &:nth-of-type(odd) {
