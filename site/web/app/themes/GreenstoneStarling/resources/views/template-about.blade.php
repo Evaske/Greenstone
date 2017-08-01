@@ -11,29 +11,25 @@
     <div class="row">
       <div class="small-12 columns">
         <h2>@php the_title(); @endphp</h2>
+        @php echo the_content(); @endphp
+        @php $consultants = get_post_meta( get_the_ID(), '_consultants_groupdemo', true ); @endphp
       </div>
     </div>
     <div class="row">
+      @foreach ($consultants as $consultant)
       <div class="small-12 columns">
         <div class="service service--about">
-          <img src="@asset('images/phil.png')" width="220" class="image" />
+          <img src="{{ $consultant['image'] }}" width="220" class="image" />
           <div class="details">
-            <h3>Phil Cullen</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel risus nibh. Ut lobortis sagittis felis, ut vestibulum nunc pulvinar eleifend. Ut aliquam nisi sit amet sem semper imperdiet. Aliquam accumsan massa id eleifend blandit. Vestibulum ornare, enim in malesuada venenatis, urna velit bibendum ipsum, ut malesuada nulla lacus vitae libero. Sed rutrum fermentum lacus a sodales. Nulla tempus pulvinar diam varius vulputate. Fusce bibendum malesuada massa id rutrum. Praesent nec ipsum maximus ante interdum egestas at vel risus.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel risus nibh. Ut lobortis sagittis felis, ut vestibulum nunc pulvinar eleifend. Ut aliquam nisi sit amet sem semper imperdiet. Aliquam accumsan massa id eleifend blandit. Vestibulum ornare, enim in malesuada venenatis, urna velit bibendum ipsum, ut malesuada nulla lacus vitae libero. Sed rutrum fermentum lacus a sodales. Nulla tempus pulvinar diam varius vulputate. Fusce bibendum malesuada massa id rutrum. Praesent nec ipsum maximus ante interdum egestas at vel risus.</p>
+            <h3>{{ $consultant['name'] }}</h3>
+            {!! $consultant['description'] !!}
           </div>
         </div>
       </div>
-      <div class="small-12 columns">
-        <div class="service service--about">
-          <img src="@asset('images/phil.png')" width="220" class="image" />
-          <div class="details">
-            <h3>Phil Cullen</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel risus nibh. Ut lobortis sagittis felis, ut vestibulum nunc pulvinar eleifend. Ut aliquam nisi sit amet sem semper imperdiet. Aliquam accumsan massa id eleifend blandit. Vestibulum ornare, enim in malesuada venenatis, urna velit bibendum ipsum, ut malesuada nulla lacus vitae libero. Sed rutrum fermentum lacus a sodales. Nulla tempus pulvinar diam varius vulputate. Fusce bibendum malesuada massa id rutrum. Praesent nec ipsum maximus ante interdum egestas at vel risus.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel risus nibh. Ut lobortis sagittis felis, ut vestibulum nunc pulvinar eleifend. Ut aliquam nisi sit amet sem semper imperdiet. Aliquam accumsan massa id eleifend blandit. Vestibulum ornare, enim in malesuada venenatis, urna velit bibendum ipsum, ut malesuada nulla lacus vitae libero. Sed rutrum fermentum lacus a sodales. Nulla tempus pulvinar diam varius vulputate. Fusce bibendum malesuada massa id rutrum. Praesent nec ipsum maximus ante interdum egestas at vel risus.</p>
-          </div>
-        </div>
-      </div>
+      @endforeach
+
+
+
     </div>
   </section>
 
