@@ -27,6 +27,7 @@
 
   .service--full {
     margin-bottom: 60px;
+    min-height: none;
 
     @include breakpoint(small only) {
       margin-bottom: 20px;
@@ -34,6 +35,50 @@
 
     p {
       margin-bottom: 20px;
+    }
+
+    p:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  .service--about {
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 30px;
+    min-height: 0;
+
+    @include breakpoint(medium down) {
+      flex-direction: column;
+    }
+
+    @include breakpoint(small only) {
+      margin-bottom: 20px;
+    }
+
+    .image {
+      align-self: center;
+      flex: 0 0 220px;
+      margin-right: 30px;
+
+      @include breakpoint(medium down) {
+        margin: 0 0 30px;
+      }
+    }
+
+    h3 {
+      margin: 0 0 10px;
+      text-align: left;
+
+      @include breakpoint(medium down) {
+        text-align: center;
+      }
+    }
+
+    p {
+      margin-bottom: 20px;
+      text-align: left;
     }
 
     p:last-of-type {
