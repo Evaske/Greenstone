@@ -14,13 +14,13 @@
 
 <footer class="footer-main">
   <div class="row">
-    <div class="small-12 medium-6 large-3 columns">
+    <div class="small-12 medium-6 large-3 columns show-for-medium">
       <a class="brand" href="{{ home_url('/') }}">
         <img src="@asset('images/logo.png')" sizes="(max-width: 768px) 132px, 215px"
           srcset="@asset('images/logo_mobile.png') 264w, @asset('images/logo.png') 430w">
       </a>
     </div>
-    <div class="small-12 medium-6 large-2 columns">
+    <div class="small-6 medium-6 large-2 columns">
       <div class="title">Navigation</div>
       <nav class="footer-nav">
         @if (has_nav_menu('primary_navigation'))
@@ -28,7 +28,7 @@
         @endif
       </nav>
     </div>
-    <div class="small-12 medium-6 large-4 columns">
+    <div class="small-6 medium-6 large-4 columns">
       <div class="title">News and Events</div>
     </div>
     <div class="small-12 medium-6 large-3 columns">

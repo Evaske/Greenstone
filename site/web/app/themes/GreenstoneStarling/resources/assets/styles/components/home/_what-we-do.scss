@@ -13,6 +13,11 @@
     line-height: 26px;
     margin-bottom: 60px;
     padding: 60px 40px;
+
+    @include breakpoint(small only) {
+      margin-bottom: 30px;
+      padding: 30px 20px;
+    }
   }
 
   .button {

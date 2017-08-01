@@ -59,9 +59,17 @@
   border-top: 2px solid $footer-border;
   padding: 60px 0;
 
+  @include breakpoint(small only) {
+    padding-bottom: 30px;
+  }
+
   .brand {
     display: block;
     margin-top: calc(50% - 50px);
+
+    @include breakpoint(small only) {
+      margin-top: 0;
+    }
   }
 
   .title {
@@ -97,6 +105,10 @@
     display: flex;
     height: 230px;
     justify-content: center;
+
+    @include breakpoint(small only) {
+      height: 100px;
+    }
   }
 
   .social-icon {
