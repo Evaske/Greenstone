@@ -72,7 +72,7 @@ add_action('after_setup_theme', function () {
      */
     add_theme_support('post-thumbnails');
     add_image_size( 'tablet', 1536, 600 );
-    add_image_size( 'mobile', 640, 400, true );
+    add_image_size( 'mobile', 640, 400, false );
 
     /**
      * Enable HTML5 markup support
