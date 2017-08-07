@@ -71,6 +71,8 @@ add_action('after_setup_theme', function () {
      * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
      */
     add_theme_support('post-thumbnails');
+    add_image_size( 'tablet', 1536, 600 );
+    add_image_size( 'mobile', 640, 400, true );
 
     /**
      * Enable HTML5 markup support

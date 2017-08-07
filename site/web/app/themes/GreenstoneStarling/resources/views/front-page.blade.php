@@ -3,17 +3,27 @@
 @section('content')
 @while(have_posts()) @php(the_post())
   <section class="home-slider">
-    <img src="@asset('images/homepage_slider_globe.jpg')" sizes="100vw"
-      srcset="@asset('images/homepage_slider_globe_mobile.jpg') 640w,
-              @asset('images/homepage_slider_globe_tablet.jpg') 1536w,
-              @asset('images/homepage_slider_globe.jpg') 2880w"
-      style="width:100%;">
-      <div class="header-wrapper">
-        <div class="header">
-          <h1>Building resilience<br/ >through evidence</h1>
-          <a href="#" class="button button--purple js-button-scroll" data-scrollto="home-what-we-do">Find Out More</a>
+
+    @php $args = array('post_type' => 'hero-images');
+    $loop = new WP_Query( $args );
+    while ( $loop->have_posts() ) : $loop->the_post(); @endphp
+
+    <div class="slider-image">
+      <img src="@php echo the_post_thumbnail_url('full'); @endphp" sizes="100vw"
+        srcset="@php echo the_post_thumbnail_url('mobile'); @endphp 640w,
+                @php echo the_post_thumbnail_url('tablet'); @endphp 1536w,
+                @php echo the_post_thumbnail_url('full'); @endphp 2880w"
+        style="width:100%;">
+        <div class="header-wrapper">
+          <div class="header">
+            <h1>@php echo get_post_meta( get_the_ID(), 'hero_text', true ); @endphp</h1>
+            <a href="#" class="button button--purple js-button-scroll" data-scrollto="home-what-we-do">Find Out More</a>
+          </div>
         </div>
       </div>
+
+      @php endwhile; @endphp
+      @php wp_reset_query(); @endphp
   </section>
 
   <section class="section section--after home-what-we-do">

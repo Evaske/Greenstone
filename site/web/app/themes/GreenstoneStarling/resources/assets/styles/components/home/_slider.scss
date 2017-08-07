@@ -5,9 +5,17 @@
   max-height: 600px;
   overflow: hidden;
   position: relative;
+  width: 100%;
 
-  @include breakpoint(medium down) {
-    min-height: 200px;
+  .slider-image {
+    position: absolute;
+    transition: transformX 1s linear;
+    visibility: hidden;
+    z-index: 999;
+
+    &:first-of-type {
+      visibility: visible;
+    }
   }
 
   .header-wrapper {

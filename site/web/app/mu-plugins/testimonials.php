@@ -27,9 +27,9 @@ function testimonials() {
         'not_found' => 'No Testimonials found',
         'not_found_in_trash' => 'No Testimonials found in Trash',
       ),
-
+      'exclude_from_search' => true,
       'public' => true,
-      'menu_position' => 25,
+      'menu_position' => 30,
       'supports' => array( 'title', 'editor'),
       'has_archive' => false
     )

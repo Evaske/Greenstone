@@ -1,1 +1,12 @@
 // Search form
+label {
+  font-weight: 500;
+}
+
+.wpcf7-text,
+.wpcf7-textarea {
+  border: 1px solid $triangle-grey;
+  border-radius: 4px;
+  box-shadow: none;
+  margin-top: 10px;
+}

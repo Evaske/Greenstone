@@ -48,7 +48,8 @@
     "oscarotero/env": "^1.1.0",
     "roots/wp-password-bcrypt": "1.0.0",
     "wpackagist-plugin/cmb2": "2.2.4",
-    "ggamel/wp-sync-db": "dev-master"
+    "ggamel/wp-sync-db": "dev-master",
+    "wpackagist-plugin/contact-form-7": "4.8.1"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^2.5.1"
