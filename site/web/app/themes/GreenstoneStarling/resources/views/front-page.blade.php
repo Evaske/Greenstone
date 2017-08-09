@@ -2,13 +2,13 @@
 
 @section('content')
 @while(have_posts()) @php(the_post())
-  <section class="home-slider">
-
+  <section class="home-slider" style="padding-top: 30%;">
+    <div class="slides">
     @php $args = array('post_type' => 'hero-images');
     $loop = new WP_Query( $args );
     while ( $loop->have_posts() ) : $loop->the_post(); @endphp
 
-    <div class="slider-image">
+    <div class="slider-image" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0;">
       <img src="@php echo the_post_thumbnail_url('full'); @endphp" sizes="100vw"
         srcset="@php echo the_post_thumbnail_url('mobile'); @endphp 640w,
                 @php echo the_post_thumbnail_url('tablet'); @endphp 1536w,
@@ -24,6 +24,7 @@
 
       @php endwhile; @endphp
       @php wp_reset_query(); @endphp
+    </div>
   </section>
 
   <section class="section section--after home-what-we-do">
