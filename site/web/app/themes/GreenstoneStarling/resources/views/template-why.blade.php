@@ -6,7 +6,7 @@
 
 @section('content')
 @while(have_posts()) @php(the_post())
-  <section class="home-slider">
+  <section class="home-slide">
     <img src="@asset('images/homepage_slider_globe.jpg')" sizes="100vw"
       srcset="@asset('images/homepage_slider_globe_mobile.jpg') 640w,
               @asset('images/homepage_slider_globe_tablet.jpg') 1536w,

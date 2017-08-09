@@ -30,6 +30,13 @@
     </div>
     <div class="small-6 medium-6 large-4 columns">
       <div class="title">News and Events</div>
+      @php $args = array('post_type' => '');
+      $loop = new WP_Query( $args );
+      while ( $loop->have_posts() ) : $loop->the_post(); @endphp
+      @php echo the_title(); @endphp
+      @php echo the_excerpt(); @endphp
+      @php endwhile; @endphp
+      @php wp_reset_query(); @endphp
     </div>
     <div class="small-12 medium-6 large-3 columns">
       <div class="social-icon-wrapper">
