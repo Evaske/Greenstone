@@ -63,7 +63,7 @@ export default {
         if(selectedNumber == (numOfSlides - 1)) {
           direction = 'right';
         }
-      }, 2000);
+      }, 10000);
     }
 
     timeStart();
