@@ -14,6 +14,45 @@ add_action('customize_register', function (\WP_Customize_Manager $wp_customize) 
             bloginfo('name');
         }
     ]);
+
+    // Add social media section
+    $wp_customize->add_section( 'greenstone_social' , array(
+      'title'      => __( 'Social Media Settings', 'greenstone' ),
+      'priority'   => 30,
+    ));
+
+    $wp_customize->add_setting('twitter_username');
+    $wp_customize->add_control(
+      'twitter_username',
+      array(
+        'label' => 'Twitter Username',
+        'section' => 'greenstone_social',
+        'settings' => 'twitter_username',
+        'type' => 'text'
+      )
+    );
+
+    $wp_customize->add_setting('facebook_username');
+    $wp_customize->add_control(
+      'facebook_username',
+      array(
+        'label' => 'Facebook Username',
+        'section' => 'greenstone_social',
+        'settings' => 'facebook_username',
+        'type' => 'text'
+      )
+    );
+
+    $wp_customize->add_setting('linkedin_username');
+    $wp_customize->add_control(
+      'linkedin_username',
+      array(
+        'label' => 'LinkedIn Username',
+        'section' => 'greenstone_social',
+        'settings' => 'linkedin_username',
+        'type' => 'text'
+      )
+    );
 });
 
 /**
