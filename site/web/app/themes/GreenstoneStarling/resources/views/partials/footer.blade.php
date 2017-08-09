@@ -30,7 +30,7 @@
     </div>
     <div class="small-6 medium-6 large-4 columns">
       <div class="title">News and Events</div>
-      @php $args = array('post_type' => '');
+      @php $args = array('posts_per_page' => 3);
       $loop = new WP_Query( $args );
       while ( $loop->have_posts() ) : $loop->the_post(); @endphp
       <a href="@php echo the_permalink(); @endphp" class="news-title">@php echo the_title(); @endphp</a>
