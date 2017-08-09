@@ -1,13 +1,16 @@
-<article @php(post_class())>
-  <header>
-    <h1 class="entry-title">{{ get_the_title() }}</h1>
-    @include('partials/entry-meta')
-  </header>
-  <div class="entry-content">
-    @php(the_content())
+<section class="section section--after home-our-services">
+  <div class="row">
+    <div class="small-12 columns">
+      <h2>{{ get_the_title() }}</h2>
+    </div>
   </div>
-  <footer>
-    {!! wp_link_pages(['echo' => 0, 'before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']) !!}
-  </footer>
-  @php(comments_template('/partials/comments.blade.php'))
-</article>
+  <div class="row">
+    <div class="small-12 columns">
+      <div class="service service--about">
+        <div class="details">
+          @php(the_content())
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

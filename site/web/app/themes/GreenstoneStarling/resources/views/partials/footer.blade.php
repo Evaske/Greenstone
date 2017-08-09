@@ -33,8 +33,8 @@
       @php $args = array('post_type' => '');
       $loop = new WP_Query( $args );
       while ( $loop->have_posts() ) : $loop->the_post(); @endphp
-      @php echo the_title(); @endphp
-      @php echo the_excerpt(); @endphp
+      <a href="@php echo the_permalink(); @endphp" class="news-title">@php echo the_title(); @endphp</a>
+      <div class="news-content">@php echo the_excerpt(); @endphp</div>
       @php endwhile; @endphp
       @php wp_reset_query(); @endphp
     </div>

@@ -80,6 +80,20 @@
     text-transform: uppercase;
   }
 
+  .news-title {
+    color: $new-purple;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .news-content p {
+    color: $font-grey;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px;
+    margin-bottom: 20px;
+  }
+
   .footer-nav ul {
     list-style: none;
     margin: 0;

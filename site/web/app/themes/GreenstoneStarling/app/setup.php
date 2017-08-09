@@ -159,3 +159,15 @@ add_action('after_setup_theme', function () {
  * Init config
  */
 sage()->bindIf('config', Config::class, true);
+
+function wpdocs_custom_excerpt_length( $length ) {
+    return 15;
+}
+add_filter( 'excerpt_length', 'App\\wpdocs_custom_excerpt_length', 999 );
+
+function custom_excerpt_more($more) {
+   global $post;
+   $more_text = '';
+   return '...';
+}
+add_filter('excerpt_more', 'App\\custom_excerpt_more');
