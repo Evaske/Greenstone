@@ -2,73 +2,90 @@
 
 export default {
   init() {
-    const timerCycle = 10000;
 
+    let timer;
     const numOfSlides = $('.slider-image').length;
-    let slideNum = 1;
+    let direction = 'left';
 
-    // Set home slider height for the first hero image
-    const imgHeight = $('.slider-image:first-of-type img').height();
-    $('.home-slider').css({'height': imgHeight + 'px', 'width': '100%'});
+    (function () {
+      let width = $(window).width();
 
-    // Set each slider image horizontally
-    $('.slider-image').each(function(index) {
-      const leftPos = $(window).outerWidth() * index;
-      $(this).css({'transform': 'translateX(' + leftPos + 'px)'});
+      setInterval(function () {
+        if ($(window).width() !== width) {
+          width = $(window).width();
+          $(window).trigger('resolutionchange');
+        }
+      }, 50);
+    }());
+
+    $(window).bind('resolutionchange', function(){
+      clearInterval(timer);
+      $('.slider-image').css({'transition':'left 0 linear'}).removeClass('active');
+      setup();
+      direction = 'left';
+      timeStart();
     });
 
-    setTimeout(function() {
-      $('.slider-image').each(function() {
-        $(this).css({'visibility': 'visible'});
+    function setup() {
+      // Set each slider image horizontally
+      $('.slider-image').each(function(index) {
+
+        if(index == 0) {
+          $(this).addClass('active');
+        }
+
+        const leftPos = $(window).outerWidth() * index;
+        $(this).css({'left': leftPos + 'px'});
       });
-      moveHeroLeft();
-    }, timerCycle);
-
-    function moveHeroLeft() {
-
-      const timer = setTimeout(function() {
-        moveHeroLeft();
-      }, timerCycle);
-
-      if(slideNum === numOfSlides) {
-        clearTimeout(timer);
-        moveHeroRight();
-        return;
-      }
-
-      $('.slider-image').each(function() {
-        const currTrans = $(this).css('transform').split(/[()]/)[1];
-        const leftPos = currTrans.split(',')[4];
-        const browserWidth = $(window).outerWidth();
-        const newPos = leftPos - browserWidth;
-
-        $(this).css({'transform': 'translateX(' + newPos + 'px)'});
-      });
-      slideNum++;
     }
 
-    function moveHeroRight() {
+    setup();
 
-      const timer = setTimeout(function() {
-        moveHeroRight();
-      }, timerCycle);
+    // Initial movement timer
+    function timeStart() {
 
-      if(slideNum === 1) {
-        clearTimeout(timer);
-        moveHeroLeft();
-        return;
-      }
+      setTimeout(function() {
+        $('.slider-image').css({'transition':'left 1s linear'});
+      }, 1000);
 
-      $('.slider-image').each(function() {
-        const currTrans = $(this).css('transform').split(/[()]/)[1];
-        const leftPos = currTrans.split(',')[4];
-        const browserWidth = $(window).outerWidth();
-        const newPos = parseInt(leftPos) + parseInt(browserWidth);
+      timer = setInterval(function() {
+        if(direction === 'left') {
+          slideLeft();
+        } else {
+          slideRight();
+        }
 
-        $(this).css({'transform': 'translateX(' + newPos + 'px)'});
-      });
-      slideNum--;
+        const selectedNumber = $('.slider-image.active').attr('data-number');
+        if(selectedNumber == 0) {
+          direction = 'left';
+        }
+
+        if(selectedNumber == (numOfSlides - 1)) {
+          direction = 'right';
+        }
+      }, 2000);
     }
+
+    timeStart();
+
+    function slideLeft() {
+      $('.slider-image').each(function() {
+        const currentLeft = $(this).position().left;
+        const newLeft = currentLeft - $(window).outerWidth();
+        $(this).css({'left': newLeft + 'px'});
+      });
+      $('.slider-image.active').removeClass('active').next().addClass('active');
+    }
+
+    function slideRight() {
+      $('.slider-image').each(function() {
+        const currentLeft = $(this).position().left;
+        const newLeft = currentLeft + $(window).outerWidth();
+        $(this).css({'left': newLeft + 'px'});
+      });
+      $('.slider-image.active').removeClass('active').prev().addClass('active');
+    }
+
 
   },
   finalize() {

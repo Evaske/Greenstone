@@ -4,24 +4,33 @@
   display: flex;
   max-height: 600px;
   overflow: hidden;
+  padding-top: 30%;
   position: relative;
   width: 100%;
   z-index: 1;
 
-  .slider-image {
-    position: absolute;
-    transition: transformX 1s linear;
-    visibility: hidden;
-    z-index: 100;
-
-    &:first-of-type {
-      visibility: visible;
-    }
+  @include breakpoint(small only) {
+    padding-top: 40%;
   }
 
-  @include breakpoint(small only) {
+  .slider-image {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    transition: left 1s linear;
+    width: 100%;
+    z-index: 100;
+
     img {
-      height: 200px;
+      @include breakpoint(medium only) {
+        height: 100%;
+        min-height: 400px;
+      }
+
+      @include breakpoint(small only) {
+        height: 100%;
+        min-height: 300px;
+      }
     }
   }
 
