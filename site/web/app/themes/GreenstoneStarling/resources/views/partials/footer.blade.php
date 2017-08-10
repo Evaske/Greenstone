@@ -40,7 +40,7 @@
     </div>
     <div class="small-12 medium-6 large-3 columns">
       <div class="social-icon-wrapper">
-        <a href="https://www.facebook.com/@php echo get_theme_mod('facebook_username'); @endphp" class="social-icon" target="_blank"><img src="@asset('images/icons/facebook.png')" width="40px" /></a>
+        <!-- <a href="https://www.facebook.com/@php echo get_theme_mod('facebook_username'); @endphp" class="social-icon" target="_blank"><img src="@asset('images/icons/facebook.png')" width="40px" /></a> -->
         <a href="https://www.twitter.com/@php echo get_theme_mod('twitter_username'); @endphp" class="social-icon" target="_blank"><img src="@asset('images/icons/twitter.png')" width="40px" /></a>
         <a href="https://www.linkedin.com/in/@php echo get_theme_mod('linkedin_username'); @endphp" class="social-icon" target="_blank"><img src="@asset('images/icons/linkedin.png')" width="40px" /></a>
       </div>

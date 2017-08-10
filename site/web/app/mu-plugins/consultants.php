@@ -31,6 +31,7 @@ function yourprefix_register_repeatable_group_field_metabox() {
 		'id'           => '_consultants_group_metabox',
 		'title'        => esc_html__( 'Consultants', 'cmb2' ),
 		'object_types' => array( 'page', ),
+		'show_on'      => array( 'key' => 'page-template', 'value' => 'views/template-about.blade.php' )
 	) );
 
 	// $group_field_id is the field id string, so in this case: $prefix . 'demo'
