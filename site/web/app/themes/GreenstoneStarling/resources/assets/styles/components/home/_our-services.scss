@@ -27,7 +27,7 @@
 
   .service--full {
     margin-bottom: 60px;
-    min-height: none;
+    min-height: 0;
 
     @include breakpoint(small only) {
       margin-bottom: 20px;
