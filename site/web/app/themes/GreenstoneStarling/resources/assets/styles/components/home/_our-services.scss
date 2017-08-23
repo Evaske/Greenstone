@@ -64,7 +64,8 @@
     }
 
     .image {
-      align-self: center;
+      align-self: flex-start;
+      border-radius: 50%;
       flex: 0 0 220px;
       margin-right: 30px;
 
