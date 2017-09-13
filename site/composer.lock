@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "d382bd65c67eac52e81e3dcebfb64133",
+    "content-hash": "6d515dd671b3e30f1f5622cd87c5ec03",
     "packages": [
         {
             "name": "composer/installers",
@@ -399,7 +399,7 @@
         },
         {
             "name": "wpackagist-plugin/cmb2",
-            "version": "2.2.5.2",
+            "version": "2.2.5.3",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/cmb2/",
@@ -407,7 +407,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/cmb2.zip?timestamp=1502204001",
+                "url": "https://downloads.wordpress.org/plugin/cmb2.zip?timestamp=1503425980",
                 "reference": null,
                 "shasum": null
             },
@@ -419,15 +419,15 @@
         },
         {
             "name": "wpackagist-plugin/contact-form-7",
-            "version": "4.8.1",
+            "version": "4.9",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/contact-form-7/",
-                "reference": "tags/4.8.1"
+                "reference": "tags/4.9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/contact-form-7.4.8.1.zip",
+                "url": "https://downloads.wordpress.org/plugin/contact-form-7.4.9.zip",
                 "reference": null,
                 "shasum": null
             },
