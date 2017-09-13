@@ -48,7 +48,6 @@
     "oscarotero/env": "^1.1.0",
     "roots/wp-password-bcrypt": "1.0.0",
     "wpackagist-plugin/cmb2": "2.2.5.2",
-    "ggamel/wp-sync-db": "dev-master",
     "wpackagist-plugin/contact-form-7": "4.8.1",
     "wpackagist-plugin/hide-my-site": "2.0.5",
     "wpackagist-plugin/google-analytics-for-wordpress": "6.2.2"

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "74d5c783d24d7bb70624db9ff29aa0bf",
+    "content-hash": "d382bd65c67eac52e81e3dcebfb64133",
     "packages": [
         {
             "name": "composer/installers",
@@ -122,45 +122,6 @@
                 "zikula"
             ],
             "time": "2017-08-09T07:53:48+00:00"
-        },
-        {
-            "name": "ggamel/wp-sync-db",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ggamel/wp-sync-db.git",
-                "reference": "bd619bb7594b0fb419a3cc49bde4572860344a5a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ggamel/wp-sync-db/zipball/bd619bb7594b0fb419a3cc49bde4572860344a5a",
-                "reference": "bd619bb7594b0fb419a3cc49bde4572860344a5a",
-                "shasum": ""
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "scripts": {
-                "test": [
-                    "./test.sh"
-                ]
-            },
-            "license": [
-                "GPL-2.0"
-            ],
-            "description": "WP Sync DB eliminates the manual work of migrating a WP database.",
-            "homepage": "https://github.com/ggamel/wp-sync-db",
-            "keywords": [
-                "db",
-                "plugin",
-                "wordpress",
-                "wp-sync-db"
-            ],
-            "support": {
-                "source": "https://github.com/ggamel/wp-sync-db/tree/master"
-            },
-            "time": "2017-09-05T16:45:01+00:00"
         },
         {
             "name": "johnpbloch/wordpress",
@@ -599,9 +560,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "ggamel/wp-sync-db": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
