@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "d4b5ee4c6d914655ef5f2da581c47ff1",
+    "content-hash": "46134117492febb672912800eb24b7af",
     "packages": [
         {
             "name": "composer/installers",
-            "version": "v1.2.0",
+            "version": "v1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "d78064c68299743e0161004f2de3a0204e33b804"
+                "reference": "9ce17fb70e9a38dd8acff0636a29f5cf4d575c1b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/d78064c68299743e0161004f2de3a0204e33b804",
-                "reference": "d78064c68299743e0161004f2de3a0204e33b804",
+                "url": "https://api.github.com/repos/composer/installers/zipball/9ce17fb70e9a38dd8acff0636a29f5cf4d575c1b",
+                "reference": "9ce17fb70e9a38dd8acff0636a29f5cf4d575c1b",
                 "shasum": ""
             },
             "require": {
@@ -59,12 +59,17 @@
             "keywords": [
                 "Craft",
                 "Dolibarr",
+                "Eliasis",
                 "Hurad",
                 "ImageCMS",
+                "Kanboard",
+                "Lan Management System",
                 "MODX Evo",
                 "Mautic",
+                "Maya",
                 "OXID",
                 "Plentymarkets",
+                "Porto",
                 "RadPHP",
                 "SMF",
                 "Thelia",
@@ -82,20 +87,24 @@
                 "croogo",
                 "dokuwiki",
                 "drupal",
+                "eZ Platform",
                 "elgg",
                 "expressionengine",
                 "fuelphp",
                 "grav",
                 "installer",
+                "itop",
                 "joomla",
                 "kohana",
                 "laravel",
+                "lavalite",
                 "lithium",
                 "magento",
                 "mako",
                 "mediawiki",
                 "modulework",
                 "moodle",
+                "osclass",
                 "phpbb",
                 "piwik",
                 "ppi",
@@ -104,6 +113,7 @@
                 "roundcube",
                 "shopware",
                 "silverstripe",
+                "sydes",
                 "symfony",
                 "typo3",
                 "wordpress",
@@ -111,7 +121,7 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2016-08-13T20:53:52+00:00"
+            "time": "2017-08-09T07:53:48+00:00"
         },
         {
             "name": "ggamel/wp-sync-db",
@@ -119,16 +129,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ggamel/wp-sync-db.git",
-                "reference": "1e435a5ad8f16e38972c0dd449bdac539b09fc9d"
+                "reference": "bd619bb7594b0fb419a3cc49bde4572860344a5a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ggamel/wp-sync-db/zipball/1e435a5ad8f16e38972c0dd449bdac539b09fc9d",
-                "reference": "1e435a5ad8f16e38972c0dd449bdac539b09fc9d",
+                "url": "https://api.github.com/repos/ggamel/wp-sync-db/zipball/bd619bb7594b0fb419a3cc49bde4572860344a5a",
+                "reference": "bd619bb7594b0fb419a3cc49bde4572860344a5a",
                 "shasum": ""
             },
             "require": {
-                "composer/installers": "~1.2.0"
+                "composer/installers": "~1.0"
             },
             "type": "wordpress-plugin",
             "scripts": {
@@ -150,7 +160,7 @@
             "support": {
                 "source": "https://github.com/ggamel/wp-sync-db/tree/master"
             },
-            "time": "2017-04-28T19:20:25+00:00"
+            "time": "2017-09-05T16:45:01+00:00"
         },
         {
             "name": "johnpbloch/wordpress",
@@ -467,16 +477,16 @@
             "homepage": "https://wordpress.org/plugins/contact-form-7/"
         },
         {
-            "name": "wpackagist-plugin/hide-my-site",
-            "version": "2.0.5",
+            "name": "wpackagist-plugin/google-analytics-for-wordpress",
+            "version": "6.2.2",
             "source": {
                 "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/hide-my-site/",
-                "reference": "tags/2.0.5"
+                "url": "https://plugins.svn.wordpress.org/google-analytics-for-wordpress/",
+                "reference": "tags/6.2.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/hide-my-site.2.0.5.zip",
+                "url": "https://downloads.wordpress.org/plugin/google-analytics-for-wordpress.6.2.2.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -484,7 +494,7 @@
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/hide-my-site/"
+            "homepage": "https://wordpress.org/plugins/google-analytics-for-wordpress/"
         }
     ],
     "packages-dev": [
