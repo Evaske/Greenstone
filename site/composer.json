@@ -49,7 +49,6 @@
     "roots/wp-password-bcrypt": "1.0.0",
     "wpackagist-plugin/cmb2": "2.2.5.3",
     "wpackagist-plugin/contact-form-7": "^4.9",
-    "wpackagist-plugin/hide-my-site": "2.0.5",
     "wpackagist-plugin/google-analytics-for-wordpress": "6.2.2"
   },
   "require-dev": {
