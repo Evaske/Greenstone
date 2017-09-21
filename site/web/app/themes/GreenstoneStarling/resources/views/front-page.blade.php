@@ -14,6 +14,7 @@
                 @php echo the_post_thumbnail_url('full'); @endphp 2880w"
         style="width:100%;">
         <div class="header-wrapper">
+          <div class="overlay"></div>
           <div class="header">
             <h1>@php echo get_post_meta( get_the_ID(), 'hero_text', true ); @endphp</h1>
             <a href="#" class="button button--purple js-button-scroll" data-scrollto="home-what-we-do">Find Out More</a>

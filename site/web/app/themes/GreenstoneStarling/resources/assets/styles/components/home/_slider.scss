@@ -46,11 +46,19 @@
     width: 100%;
   }
 
+  .overlay {
+    background: rgba(0, 0, 0, .3);
+    height: 100%;
+    position: absolute;
+    width: 100%;
+  }
+
   .header {
     align-items: flex-end;
     display: flex;
     flex-direction: column;
     max-width: 75rem;
+    position: relative;
     width: 100%;
 
     @include breakpoint(medium only) {
