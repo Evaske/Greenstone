@@ -50,7 +50,7 @@
       </div>
     </div>
     <div class="row">
-      <div class="small-12 medium-3 columns">
+      <div class="small-12 medium-6 large-3 columns">
         <div class="service">
           <img src="@asset('images/icons/logo-green.png')" width="60" />
           <h3>@php echo get_post_meta(get_the_ID(), 'home-service-one-title', true); @endphp</h3>
@@ -58,7 +58,7 @@
           <a href="/our-services#service-one" class="button button--purple">More Information</a>
         </div>
       </div>
-      <div class="small-12 medium-3 columns">
+      <div class="small-12 medium-6 large-3 columns">
         <div class="service">
           <img src="@asset('images/icons/logo-purple.png')" width="60" />
           <h3>@php echo get_post_meta(get_the_ID(), 'home-service-two-title', true); @endphp</h3>
@@ -66,7 +66,7 @@
           <a href="/our-services#service-two" class="button button--purple">More Information</a>
         </div>
       </div>
-      <div class="small-12 medium-3 columns">
+      <div class="small-12 medium-6 large-3 columns">
         <div class="service">
           <img src="@asset('images/icons/logo-light-green.png')" width="60" />
           <h3>@php echo get_post_meta(get_the_ID(), 'home-service-three-title', true); @endphp</h3>
@@ -74,7 +74,7 @@
           <a href="/our-services#service-three" class="button button--purple">More Information</a>
         </div>
       </div>
-      <div class="small-12 medium-3 columns">
+      <div class="small-12 medium-6 large-3 columns">
         <div class="service">
           <img src="@asset('images/icons/logo-green.png')" width="60" />
           <h3>@php echo get_post_meta(get_the_ID(), 'home-service-four-title', true); @endphp</h3>
