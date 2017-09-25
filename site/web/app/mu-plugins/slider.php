@@ -52,11 +52,16 @@ function hero_image_meta() {
 
 function display_hero_image_meta_box( $hero ) {
   $text = esc_html( get_post_meta( $hero->ID, 'hero_text', true ) );
+  $dark = esc_html( get_post_meta( $hero->ID, 'hero_dark', true ) );
   ?>
   <table>
     <tr>
       <td style="width: 100%">Hero Text</td>
       <td><input type="text" size="60" name="hero_text" value="<?php echo $text; ?>" /></td>
+    </tr>
+    <tr>
+      <td style="width: 100%">Dark Overlay? (tick for yes)</td>
+      <td><input type="checkbox" name="hero_dark" value="<?php echo $dark; ?>" /></td>
     </tr>
   </table>
   <?php
