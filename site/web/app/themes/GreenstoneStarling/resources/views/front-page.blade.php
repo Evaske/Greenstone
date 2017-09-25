@@ -18,7 +18,6 @@
             <div class="overlay"></div>
           @php } @endphp
           <div class="header">
-            <h1>@php echo get_post_meta( get_the_ID(), 'hero_dark', true ); @endphp</h1>
             <h1>@php echo get_post_meta( get_the_ID(), 'hero_text', true ); @endphp</h1>
             <a href="#" class="button button--purple js-button-scroll" data-scrollto="home-what-we-do">Find Out More</a>
           </div>

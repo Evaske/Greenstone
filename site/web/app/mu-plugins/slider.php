@@ -53,6 +53,7 @@ function hero_image_meta() {
 function display_hero_image_meta_box( $hero ) {
   $text = esc_html( get_post_meta( $hero->ID, 'hero_text', true ) );
   $dark = esc_html( get_post_meta( $hero->ID, 'hero_dark', true ) );
+
   ?>
   <table>
     <tr>
@@ -61,7 +62,7 @@ function display_hero_image_meta_box( $hero ) {
     </tr>
     <tr>
       <td style="width: 100%">Dark Overlay? (tick for yes)</td>
-      <td><input type="checkbox" name="hero_dark" value="<?php echo $dark; ?>" /></td>
+      <td><input type='hidden' value='0' name='hero_dark'><input type="checkbox" name="hero_dark" <?php if( $dark == true ) { ?>checked="checked"<?php } ?> /></td>
     </tr>
   </table>
   <?php
@@ -73,6 +74,9 @@ function add_hero_image( $hero_id, $hero ) {
   if ( $hero->post_type == 'hero-images' ) {
     if ( isset( $_POST['hero_text'] ) && $_POST['hero_text'] != '' ) {
         update_post_meta( $hero_id, 'hero_text', $_POST['hero_text'] );
+    }
+    if ( isset( $_POST['hero_dark'] )) {
+        update_post_meta( $hero_id, 'hero_dark', $_POST['hero_dark'] );
     }
   }
 }
