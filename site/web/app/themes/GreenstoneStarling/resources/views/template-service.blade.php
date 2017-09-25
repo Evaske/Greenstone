@@ -35,6 +35,13 @@
           @php echo get_post_meta(get_the_ID(), 'service-three-content', true); @endphp
         </div>
       </div>
+      div class="small-12 columns">
+        <div class="service service--full" id="service-four">
+          <img src="@asset('images/icons/logo-green.png')" width="60" />
+          <h3>@php echo get_post_meta(get_the_ID(), 'service-four-title', true); @endphp</h3>
+          @php echo get_post_meta(get_the_ID(), 'service-four-content', true); @endphp
+        </div>
+      </div>
     </div>
   </section>
 
