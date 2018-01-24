@@ -11,6 +11,7 @@ web/app/mu-plugins/*/
 web/app/upgrade
 web/app/uploads/*
 !web/app/uploads/.gitkeep
+!web/app/uploads/GeoLite2-City.mmdb
 
 # WordPress
 web/wp
