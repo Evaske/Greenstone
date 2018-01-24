@@ -32,10 +32,6 @@
     {
       "type": "composer",
       "url": "https://wpackagist.org"
-    },
-    {
-      "type": "vcs",
-      "url": "https://github.com/ggamel/wp-sync-db"
     }
   ],
   "minimum-stability": "dev",
@@ -44,13 +40,13 @@
     "php": ">=5.6",
     "composer/installers": "~1.2",
     "vlucas/phpdotenv": "^2.0.1",
-    "johnpbloch/wordpress-core": "4.9.2",
     "oscarotero/env": "^1.1.0",
     "roots/wp-password-bcrypt": "1.0.0",
     "wpackagist-plugin/cmb2": "2.2.5.3",
     "wpackagist-plugin/woocommerce": "3.2.6",
     "wpackagist-plugin/contact-form-7": "^4.9",
-    "wpackagist-plugin/google-analytics-for-wordpress": "6.2.7"
+    "wpackagist-plugin/google-analytics-for-wordpress": "6.2.7",
+    "johnpbloch/wordpress": "4.9.2"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.2.2"

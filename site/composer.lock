@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "d8aa8f267a04e3b7242f0f03222386a3",
-    "content-hash": "db35382890771d8b9880472ab4480e09",
+    "hash": "d98a461c7dba7132fb9885f1c742cb4c",
+    "content-hash": "edf739d549af9534e997bc18c66758d5",
     "packages": [
         {
             "name": "composer/installers",
@@ -128,6 +128,45 @@
             "time": "2017-12-29 09:13:20"
         },
         {
+            "name": "johnpbloch/wordpress",
+            "version": "4.9.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/johnpbloch/wordpress.git",
+                "reference": "34627d0b992bbe9ed909c73b27307297fb21f2a4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/johnpbloch/wordpress/zipball/34627d0b992bbe9ed909c73b27307297fb21f2a4",
+                "reference": "34627d0b992bbe9ed909c73b27307297fb21f2a4",
+                "shasum": ""
+            },
+            "require": {
+                "johnpbloch/wordpress-core": "4.9.2",
+                "johnpbloch/wordpress-core-installer": "^1.0",
+                "php": ">=5.3.2"
+            },
+            "type": "package",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "WordPress Community",
+                    "homepage": "http://wordpress.org/about/"
+                }
+            ],
+            "description": "WordPress is web software you can use to create a beautiful website or blog.",
+            "homepage": "http://wordpress.org/",
+            "keywords": [
+                "blog",
+                "cms",
+                "wordpress"
+            ],
+            "time": "2018-01-16 23:12:18"
+        },
+        {
             "name": "johnpbloch/wordpress-core",
             "version": "4.9.2",
             "source": {
@@ -166,6 +205,55 @@
                 "wordpress"
             ],
             "time": "2018-01-16 23:12:12"
+        },
+        {
+            "name": "johnpbloch/wordpress-core-installer",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/johnpbloch/wordpress-core-installer.git",
+                "reference": "e9e767f2d9f994f358c34b41def2c410ad8717f2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/johnpbloch/wordpress-core-installer/zipball/e9e767f2d9f994f358c34b41def2c410ad8717f2",
+                "reference": "e9e767f2d9f994f358c34b41def2c410ad8717f2",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.0"
+            },
+            "conflict": {
+                "composer/installers": "<1.0.6"
+            },
+            "require-dev": {
+                "composer/composer": "^1.0",
+                "phpunit/phpunit": ">=4.8.35"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "johnpbloch\\Composer\\WordPressCorePlugin"
+            },
+            "autoload": {
+                "psr-0": {
+                    "johnpbloch\\Composer\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "John P. Bloch",
+                    "email": "me@johnpbloch.com"
+                }
+            ],
+            "description": "A custom installer to handle deploying WordPress with composer",
+            "keywords": [
+                "wordpress"
+            ],
+            "time": "2017-05-31 18:42:33"
         },
         {
             "name": "oscarotero/env",
