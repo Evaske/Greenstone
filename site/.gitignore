@@ -5,6 +5,7 @@ web/app/plugins/*
 !web/app/plugins/cmb2
 !web/app/plugins/fooevents
 !web/app/plugins/woocommerce-eu-vat-assistant
+!web/app/plugins/woocommerce
 !web/app/plugins/woocommerce-gateway-stripe
 !web/app/plugins/wc-aelia-foundation-classes
 !web/app/plugins/wp-sync-db
