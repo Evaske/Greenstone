@@ -68,3 +68,12 @@ add_filter('template_include', function ($template) {
  * Tell WordPress how to find the compiled path of comments.blade.php
  */
 add_filter('comments_template', 'App\\template_path');
+
+add_filter( 'woocommerce_enable_order_notes_field', '__return_false' );
+
+add_filter( 'woocommerce_billing_fields', 'App\\wc_npr_filter_phone', 10, 1 );
+
+function wc_npr_filter_phone( $address_fields ) {
+$address_fields['billing_phone']['required'] = false;
+return $address_fields;
+}

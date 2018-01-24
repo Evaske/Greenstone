@@ -3,7 +3,10 @@ web/app/plugins/*
 !web/app/plugins/.gitkeep
 !web/app/plugins/cmb2/*
 !web/app/plugins/cmb2
-!web/app/plugins/wp-sync-db-*
+!web/app/plugins/fooevents
+!web/app/plugins/woocommerce-eu-vat-assistant
+!web/app/plugins/woocommerce-gateway-stripe
+!web/app/plugins/wc-aelia-foundation-classes
 web/app/mu-plugins/*/
 web/app/upgrade
 web/app/uploads/*

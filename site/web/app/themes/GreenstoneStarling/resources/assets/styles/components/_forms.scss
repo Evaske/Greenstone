@@ -8,10 +8,33 @@ label {
 }
 
 .wpcf7-text,
-.wpcf7-textarea {
+.wpcf7-textarea,
+.input--text {
   border: 1px solid $triangle-grey;
   border-radius: 4px;
   box-shadow: none;
   margin-bottom: 0;
   margin-top: 10px;
+}
+
+.input--select select {
+  border-radius: 4px;
+}
+
+.input--checkout {
+  margin: 5px 0;
+}
+
+.select2-container .select2-selection--single {
+  height: 40px;
+  margin: 5px 0;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+  height: 40px;
+  line-height: 40px;
+}
+
+.woocommerce {
+  width: 100%;
 }

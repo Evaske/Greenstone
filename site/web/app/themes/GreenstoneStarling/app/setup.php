@@ -171,3 +171,8 @@ function custom_excerpt_more($more) {
    return '...';
 }
 add_filter('excerpt_more', 'App\\custom_excerpt_more');
+
+add_action( 'after_setup_theme', 'App\\woocommerce_support' );
+function woocommerce_support() {
+    add_theme_support( 'woocommerce' );
+}

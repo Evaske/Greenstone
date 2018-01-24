@@ -1,23 +1,42 @@
 // Buttons
-.button {
+.button,
+.button-alt {
   align-items: center;
+  border: 0;
   border-radius: 4px;
   box-shadow: 0 1px 3px 0 rgba($black, .08), 0 4px 6px 0 rgba($blue-shadow, .11);
   color: $white;
+  cursor: pointer;
   display: flex;
   flex: 0 0 40px;
+  font-family: 'Camphor';
+  font-size: .9rem;
   font-weight: bold;
   height: 40px;
   padding: 0 14px;
   text-transform: uppercase;
   transition: all .25s linear;
+  white-space: nowrap;
 
   &.button--purple {
     background: $new-purple;
+
+    &:disabled {
+      opacity: .5;
+    }
+  }
+
+  &.button--green {
+    background: $green;
+
+    &:disabled {
+      opacity: .5;
+    }
   }
 
   &:hover {
     box-shadow: 0 1px 3px 0 rgba($black, .15), 0 4px 6px 0 rgba($blue-shadow, .2);
+    color: $white;
     transform: translateY(-2px);
   }
 }

@@ -6,7 +6,7 @@
     </div>
     <div class="small-12 medium-6 columns">
       <div class="button-wrapper">
-        <a href="/contact" class="button button--purple">Contact One Of Our Team</a>
+        <a href="/contact" class="button-alt button--purple">Contact One Of Our Team</a>
       </div>
     </div>
   </div>
