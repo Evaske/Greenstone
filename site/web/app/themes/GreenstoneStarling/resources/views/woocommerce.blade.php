@@ -22,10 +22,9 @@ input[type="number"] {
                 <h2 style="margin-bottom: 0;"><?php echo $terms; ?></h2>
                 <span style="font-size: 18px; font-weight: 500; display: flex; justify-content: center;"><?php the_title(); ?></span>
                 <span style="font-size: 16px; font-weight: 500;"><?php echo $product->get_price_html(); ?></span>
-                <span style="display: flex; justify-content: center;"><?php echo $product->get_stock_quantity() ?> spaces available</span>
                 <?php if ( $product->is_in_stock() ) : ?>
                   <form class="cart" method="post" enctype='multipart/form-data' style="background: #f2f2f2; margin-top: 20px;border-radius: 4px; padding: 10px; display: flex; align-items: center; justify-content: space-between;">
-                    <span>Tickets:</span>
+                    <span>Number of places:</span>
                       <?php
                         woocommerce_quantity_input( array(
                           'min_value'   => apply_filters( 'woocommerce_quantity_input_min', $product->get_min_purchase_quantity(), $product ),
@@ -33,7 +32,17 @@ input[type="number"] {
                           'input_value' => isset( $_POST['quantity'] ) ? wc_stock_amount( $_POST['quantity'] ) : $product->get_min_purchase_quantity(),
                         ) );
                       ?>
-                    <button type="submit" style="margin:0;" name="add-to-cart" value="<?php echo esc_attr( $product->get_id() ); ?>" class="button-alt button--purple"><?php echo esc_html( $product->single_add_to_cart_text() ); ?></button>
+                    <button type="submit" style="margin:0;" name="add-to-cart" value="<?php echo esc_attr( $product->get_id() ); ?>" class="button-alt button--purple" id="make-booking">Make Booking</button>
+                    <script>
+                    var qty = document.getElementsByClassName("qty")[0];
+                    qty.addEventListener("input", function (event) {
+                      if (qty.validity.rangeOverflow) {
+                        qty.setCustomValidity("The maximum number of spaces remaining on this course is " + <?php echo $product->get_stock_quantity(); ?>);
+                      } else {
+                        qty.setCustomValidity("");
+                      }
+                    });
+                    </script>
                   </form>
                 <?php endif;?></td>
               </div>

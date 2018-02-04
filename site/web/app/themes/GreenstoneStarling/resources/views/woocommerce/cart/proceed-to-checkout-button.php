@@ -24,5 +24,5 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 
 <a href="<?php echo esc_url( wc_get_checkout_url() );?>" class="button-alt button--purple alt wc-forward">
-	<?php esc_html_e( 'Proceed to checkout', 'woocommerce' ); ?>
+	Continue With Booking
 </a>

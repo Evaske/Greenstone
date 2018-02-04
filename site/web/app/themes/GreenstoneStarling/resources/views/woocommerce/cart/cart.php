@@ -25,7 +25,7 @@ do_action( 'woocommerce_before_cart' ); ?>
   <div class="small-12 medium-8 columns">
 <form class="woocommerce-cart-form" action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post" >
 	<?php do_action( 'woocommerce_before_cart_table' ); ?>
-  <h2>Shopping Cart</h2>
+  <h2>Booking</h2>
 	<table class="shop_table shop_table_responsive cart woocommerce-cart-form__contents" cellspacing="0">
 		<thead>
 			<tr>
@@ -118,12 +118,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 			<tr>
 				<td colspan="6" class="actions">
 
-					<?php if ( wc_coupons_enabled() ) { ?>
-						<div class="coupon">
-							<label for="coupon_code"><?php _e( 'Coupon:', 'woocommerce' ); ?></label> <input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="<?php esc_attr_e( 'Coupon code', 'woocommerce' ); ?>" /> <input type="submit" class="button" name="apply_coupon" value="<?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?>" />
-							<?php do_action( 'woocommerce_cart_coupon' ); ?>
-						</div>
-					<?php } ?>
+					
 
 					<input type="submit" class="button-alt button--green" style="float:right;" name="update_cart" value="<?php esc_attr_e( 'Update cart', 'woocommerce' ); ?>" />
 
